@@ -1,0 +1,51 @@
+<!Doctype html>
+<html lang='pt-br'>
+	<head>
+ 		<meta charset="utf-8">
+		 <title>Feelings</title>
+		 <link rel="stylesheet" href="/css/style.css">
+		 <link rel="icon" href="/img/logo.png">
+	</head>
+	<body class="home_fundo">
+
+		<div class="fundo_login"><img class='img_navbar' src="/img/logo_pequena.png"></div>
+
+		<div class="home">
+				<section class="menu">
+					<div class='a_menu'><img src="/img/pag_inicial.png"><a href="/">PÁGINA INICIAL</a></div>
+					<div class='a_menu'><img src="/img/perfil.png"><a href="/perfil">PERFIL</a></div>
+					<div class='a_menu'><img src="/img/sair.png"><a href="/logout">SAIR</a></div>
+				</section>
+	
+				<div class="home_2">
+					<section class="posts">
+                        <% if(usuarios.length > 0) { %>
+                            <ul>
+                                <% for(var i=0; i<usuarios.length; i++) { %>
+                                    <li class="li">
+                                        <h2><%= usuarios[i].nome_usuario %></h2>
+                                    </li>
+                                <% } %>
+                            </ul>
+						<% } else { %>
+							<ul>
+								<li class="li">
+									<p class="post">Nenhuma usuário encontrado</p>
+								</li>
+							</ul>
+						<% } %>
+					</section>
+				</div>
+
+                <section class="user">
+                    <h1 id="h1_busca">Pesquise um usuário</h2>
+                    <form action="/pesquisar" method="POST" class="form_login">
+                        <div><input class='input_busca' type="text" placeholder="Nome" name="nome_usuario" required></div>
+                        <div><button class='button_busca' type="submit">Buscar</button></div>
+                    </form>
+                </section>
+			</div>
+	</body>
+
+	<script type="text/javascript" src="/js/main.js"></script>
+</html>

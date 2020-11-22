@@ -1,0 +1,42 @@
+<!Doctype html>
+<html lang='pt-br'>
+	<head>
+ 		<meta charset="utf-8">
+		 <title>Feelings</title>
+		 <link rel="stylesheet" href="/css/style.css">
+		 <link rel="icon" href="/img/logo.png">
+	</head>
+	<body class="home_fundo">
+
+		<div class="fundo_login"><img class='img_navbar' src="/img/logo_pequena.png"></div>
+
+		<div class="home">
+				<section class="menu">
+					<div class='a_menu'><img src="/img/pag_inicial.png"><a href="/">PÁGINA INICIAL</a></div>
+					<div class='a_menu'><img src="/img/perfil.png"><a href="/perfil">PERFIL</a></div>
+					<div class='a_menu'><img src="/img/sair.png"><a href="/logout">SAIR</a></div>
+				</section>
+	
+				<div class="home_2">
+					<section class="main">
+						<div class="fundo_login pag_inicial"><h1>EDITAR PERFIL</h1></div>
+					</section>
+	
+					<section class="posts">
+						<div class="li">
+							<form action="/editar" method="POST" class="form_login" enctype="multipart/form-data">
+								<input type="text" class='input_editar' style="display: none;" name="_id" value="<%= usuario[0]._id %>">
+								<div><input type="file" class='input_editar input_foto_editar' name="foto_usuario"></div>
+								<div><input type="text" class='input_editar' placeholder="Nome" name="nome_usuario" value="<%= usuario[0].nome_usuario %>"></div>
+								<div><input type="text" class='input_editar' placeholder="E-mail" name="email_usuario" value="<%= usuario[0].email_usuario %>"></div>
+								<div><input type="text" class='input_editar' placeholder="Senha" name="senha_usuario" value="<%= usuario[0].senha_usuario %>"></div>
+								<div><button class='button_editar' type="submit">Salvar</button></div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+	</body>
+
+	<script type="text/javascript" src="/js/main.js"></script>
+</html>

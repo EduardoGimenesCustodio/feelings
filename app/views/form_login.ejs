@@ -1,0 +1,24 @@
+<!Doctype html>
+<html lang='pt-br'>
+	<head>
+ 		<meta charset="utf-8">
+		 <title>Login</title>
+		 <link rel="stylesheet" href="/css/style.css">
+		 <link rel="icon" href="img/logo.png">
+	</head>
+	<body class="fundo_login">        
+        <% if(validacao.length > 0) { %>
+            <p><%= validacao %></p>
+        <% } %>
+
+		<img src="img/logo_grande.png" class="logo_login">
+		<h1 id="h1_login">LOGIN</h2>
+		<form action="/login" method="POST" class="form_login">
+			<div><input class='input_login' type="email" placeholder="E-mail" name="email_usuario" required></div>
+			<div><input class='input_login' type="password" placeholder="Senha" name="senha_usuario" required></div>
+			<div><button class='button_login' type="submit">Entrar</button></div>
+			<a href="/form_cadastro">Inscrever-se no feelings</a>
+		</form>
+		
+	</body>
+</html>
