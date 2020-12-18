@@ -9,7 +9,7 @@ module.exports.pesquisar = function(app, req, res){
 	}
 
 	var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://localhost:27017/";
+	var url = app.config.dbConnection();
     
     var nome_usuario = req.body.nome_usuario;
 

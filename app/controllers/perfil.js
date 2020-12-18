@@ -5,7 +5,7 @@ module.exports.perfil = function(app, req, res){
 	}
 
 	var MongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://localhost:27017/";
+	var url = app.config.dbConnection();
 
 	MongoClient.connect(url, {useNewUrlParser: true },
 	function(err, db) {
@@ -23,7 +23,7 @@ module.exports.perfil = function(app, req, res){
 
 module.exports.form_editar = function(app, req, res){
 	var MongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://localhost:27017/";
+	var url = app.config.dbConnection();
 
 	MongoClient.connect(url, {useNewUrlParser: true },
 	function(err, db) {
@@ -41,7 +41,7 @@ module.exports.form_editar = function(app, req, res){
 
 module.exports.editar = function(app, req, res){
 	var MongoClient = require('mongodb').MongoClient;
-	var url = "mongodb://localhost:27017/";
+	var url = app.config.dbConnection();
 
 	MongoClient.connect(url, {useNewUrlParser: true },
 	function(err, db) {
