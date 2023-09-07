@@ -1,3 +1,3 @@
 ## Description
 
-Project developed as Course Completion Work of the technical course in Computing for the Internet at IFMS. It consists of an informative website about international travel in which Brazilians can consult the rules of other countries for the entry of foreigners in their territories.
+Project developed during the technical course in Computing for the Internet at IFMS. It consists of a site where users share everyday experiences and talk about their feelings, interacting in a community where all members aim to not let people feel alone.
